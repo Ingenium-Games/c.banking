@@ -17,12 +17,15 @@
 <body>
     <!-- Menu -->
     <div id="Menu" style="display: show;">
+        <div id="Pin" style="display: none;">
+            <h1>Please Enter Your Pin</h1>
+        </div>
         <img src="img/maze.png" class="maze">
         <div id="Home" style="display: show;">    
             <!-- Left -->
             <div id="Info">
                 <br/>
-                <h1 id="account">Account Number  [<span></span>]</h1>
+                <h1 id="account">Account Number: <span></span></h1>
                 <br/>
                 <h2 id="cash">Cash: $<span></span></h3>
                 <br/>
@@ -30,23 +33,29 @@
                 <br/>
                 <h3 id="outstanding">Bills: $<span></span></h3>
                 <br/>
-                <h2>Transactions:</h2>
-                <br/>
-                <div id="transactionhistory">
+                <div id="ActionRow">
+                <a id="Deposit" class="Selector tooltip"><img src="img/icons8-money-100.png" /><span class="tooltiptext">Deposit</span></a>
+                <a id="Withdraw" class="Selector tooltip"><img src="img/icons8-cash-app-100.png" /><span class="tooltiptext">Deposit</span></a>
+                <a id="Transfer" class="Selector tooltip"><img src="img/icons8-money-100.png" /><span class="tooltiptext">Deposit</span></a>
                 </div>
             </div>
             <!-- Right -->
             <div id="Select">
                 <img src="img/mazelogo.png" class="mazelogo">
+                <br/>
+                <h1>Transactions:</h2>
+                <br/>
+                <div id="transactionhistory">
+                </div>
             </div>
         </div>
-        <div id="Deposit" style="display: hide;">    
+        <div id="Deposit" style="display: none;">    
             
         </div>
-        <div id="Withdrawl" style="display: hide;">    
+        <div id="Withdrawl" style="display: none;">    
             
         </div>
-        <div id="Transfer" style="display: hide;">    
+        <div id="Transfer" style="display: none;">    
             
         </div>
 

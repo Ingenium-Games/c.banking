@@ -54,7 +54,7 @@ $(document).ready(function () {
     };
     document.onkeyup = function(data){
         if (data == 27){
-            $.post('http://c.banking/Client:NUI:OnClose', JSON.stringify({
+            $.post('https://c.banking/Client:NUI:OnClose', JSON.stringify({
 
             }));
         }
