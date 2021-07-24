@@ -51,20 +51,12 @@ p {
   text-shadow: 2px 2px 4px #000000;
 }
 
-#Play {
-  bottom: 2vh !important;
-  right: 2vw !important;
-  width: 5.35vw;
-  height: 13vh;
-  position: absolute !important;
-}
-
 #Menu {
   color: #fff;
   border: 2px solid rgba(0, 0, 0, 0.25) !important;
   border-radius: 35px !important;
   background-color: rgba(0, 0, 0, 0.75) !important;
-  box-shadow: 8px 8px 9px rgba(0, 0, 0, 0.65) !important;
+  box-shadow: 0px 0px 12px 7px rgba(0, 0, 0, 0.65) !important;
   z-index: 1;
   top: 12.5vh !important;
   bottom: 12.5vh !important;  
@@ -78,18 +70,18 @@ p {
 }
 
 .maze {
-  z-index: 2;
-  bottom: 3%;
-  left:1.75%;
-  width: 368px;
-  height: 79px;
+  z-index: 0;
+  top: 45vh;
+  left:36.75vw;
+  width: 25vw;
+  height: 12vh;
   opacity: 75%;
   position: absolute !important;
 }
 
 .mazelogo {
   z-index: 2;
-  top: 1%;
+  top: 35%;
   bottom: 1%;
   right:1.75%;
   width: 96%;
@@ -98,36 +90,70 @@ p {
   position: absolute !important;
 }
 
-#Select {
+#SelectL {
   border: 3px solid rgba(0, 0, 0, 0.25) !important;
-  z-index: 2;
-  top: 2% !important;
-  bottom: 2% !important;  
-  right: 1% !important;
-  width: 48% !important;
-  height: 96% !important;
-  white-space: nowrap;
-  overflow-y: hidden;
-  position: absolute;
-
-}
-
-#Info {
-  border: 3px solid rgba(0, 0, 0, 0.25) !important;
+  border-radius: 28px;
+  background-color: rgba(0, 0, 0, 0.25) !important;
+  box-shadow: 0px 0px 6px 2px gray inset;
   z-index: 2;
   top: 2% !important;
   bottom: 2% !important;  
   left: 1% !important;
-  width: 48% !important;
-  height: 96% !important;
+  width: 12% !important;
+  height: 95% !important;
   white-space: nowrap;
   overflow-y: hidden;
   position: absolute;
 }
 
+#SelectR {
+  border: 3px solid rgba(0, 0, 0, 0.25) !important;
+  border-radius: 28px;
+  background-color: rgba(0, 0, 0, 0.25) !important;
+  box-shadow: 0px 0px 6px 2px gray inset;
+  z-index: 2;
+  top: 2% !important;
+  bottom: 2% !important;  
+  right: 1% !important;
+  width: 12% !important;
+  height: 95% !important;
+  white-space: nowrap;
+  overflow-y: hidden;
+  position: absolute;
+}
+
+#Info {
+  border: 3px solid rgba(0, 0, 0, 0.25) !important;
+  border-radius: 28px;
+  background-color: rgba(21, 15, 56, 0.25) !important;
+  box-shadow: 0px 0px 20px 0.25px rgba(176, 170, 255, 0.45) inset;
+  z-index: 2;
+  top: 2% !important;
+  bottom: 2% !important;  
+  left: 14.5% !important;
+  width: 70.5% !important;
+  height: 95% !important;
+  white-space: nowrap;
+  overflow-y: hidden;
+  position: absolute;
+}
+
+.scanlines {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: -webkit-linear-gradient(#020 0%, transparent 25%);
+  background-image: linear-gradient(to , transparent 25%);
+  background-size: 4px 4px;
+}
+
 .Selector {
-  padding-top: 15px !important;
-  padding-left: 35px !important;
+  padding-top: 4.65vh !important;
+  padding-bottom: 0.75vh !important;
+  padding-left: 1.75vw !important;
 }
 
 #ActionRow {
@@ -135,14 +161,19 @@ p {
 }
 
 a {
+  padding-top: 15px !important;
   text-decoration: none !important;
 }
 
 a img {
   border: 0px !important;
   margin: 0 !important;
+  min-width: 35px;
   max-width: 95px !important;
+  width: 6vw;
+  min-height: 35;
   max-height: 95px !important;
+  height: 11vh;
   border-color: rgba(0, 0, 0, 0) !important;
   border: 0px solid rgba(0, 0, 0, 0.25) !important;
   border-radius: 50% !important;
@@ -152,8 +183,12 @@ a img {
 a img:hover {
   border: 0px !important;
   margin: 0 !important;
+  min-width: 35px;
   max-width: 95px !important;
+  width: 6vw;
+  min-height: 35;
   max-height: 95px !important;
+  height: 11vh;
   border-color: rgba(0, 0, 0, 0) !important;
   border: 0px solid rgba(0, 0, 0, 0.25) !important;
   border-radius: 50% !important;
@@ -178,8 +213,8 @@ a img:hover {
   border-radius: 6px;
   position: absolute;
   z-index: 30;
-  top: 125px;
-  left: 32.5px;
+  top: 16.32vh;
+  left: 1.58vw;
 }
 
 .tooltip:hover .tooltiptext {
