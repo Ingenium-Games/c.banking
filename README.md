@@ -1,6 +1,8 @@
 # c.banking
 Banking : NUI and Function Resource.
 
+<span style="display:block;text-align:center">![Image](./c.banking.png)</span>
+
 
 MIT License
 
