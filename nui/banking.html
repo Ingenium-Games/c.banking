@@ -25,56 +25,101 @@
             max: 10,
             decimal: false
           });
+          numpad.attach({
+            target: "DepositPad",
+            decimal: false
+          });
+          numpad.attach({
+            target: "WithdrawPad",
+            decimal: false
+          });
+          numpad.attach({
+            target: "TransferAccountPad",
+            decimal: false
+          });
+          numpad.attach({
+            target: "TransferAmountPad",
+            decimal: false
+          });
         });
     </script>
-    <img src="img/maze.png" class="maze">
+    <img src="img/mazelogo.png" class="mazelogo">
     <!-- Menu -->
-    <div id="Menu" style="display: show;">
+
+    <div id="DepositActions" style="display: none;">
+        <div id="ActionRow">
+            <a id="HomeLi" class="Selector tooltip" onclick="MenuOption('Account')"><img src="img/icons8-bank-building-100.png" /><span class="tooltiptext">Home</span></a>
+        </div>
+    </div> 
+
+    <div id="WithdrawActions" style="display: none;">
+        <div id="ActionRow">
+            <a id="HomeLi" class="Selector tooltip" onclick="MenuOption('Account')"><img src="img/icons8-bank-building-100.png" /><span class="tooltiptext">Home</span></a>
+            
+        </div>
+    </div>   
+
+    <div id="TransferActions" style="display: none;">
+        <div id="ActionRow">
+            <a id="HomeLi" class="Selector tooltip" onclick="MenuOption('Account')"><img src="img/icons8-bank-building-100.png" /><span class="tooltiptext">Home</span></a>
+            <a id="HomeLi" class="Selector tooltip" onclick="MenuOption('Account')"><img src="img/icons8-bank-building-100.png" /><span class="tooltiptext">Home</span></a>
+        </div>
+    </div>  
+
+    <div id="Menu" style="display: inline;">
         <div id="Pin" style="display: none;">
             <h1>Please Enter Your Pin</h1>
             <form>
                 <input type="text" id="EnterPin" class="EnterPin"/>
-                <input type="submit"/>
+                <button>Submit</button>
             </form>
         </div>
-        <div id="Home" style="display: show;">    
+        <div id="Home" style="display: inline;">    
             <!-- Left -->
             <div id="Info"  class="scanlines">
-                <div id="Account" style="display: none;">    
-            
+                <div id="Account" style="display: none;">
+                    <p id="AccountHeading" class="editor-text">[ Account Information ]<span></span></p>
+                    <p id="AccountNumber" class="editor-text">Account: <span></span></p>
+                    <p id="AccountBalance" class="editor-text">Balance: <span></span></p>
                 </div>
-                <div id="Deposit" style="display: none;">    
-            
+                <div id="Deposit" style="display: inline;">    
+                    <p id="DepositHeading" class="editor-text">[ Deposit Funds ]<span></span></p>
+                    <p id="DepositAmount" class="editor-text">Amount: <span></span></p> 
                 </div>
-                <div id="Withdrawl" style="display: none;">    
-                    
+                <div id="Withdraw" style="display: none;">    
+                    <p id="WithdrawHeading" class="editor-text">[ Withdraw Funds ]<span></span></p>
+                    <p id="WithdrawAmount" class="editor-text">Amount: <span></span></p>
+
                 </div>
                 <div id="Transfer" style="display: none;">    
-                    
+                    <p id="TransferHeading" class="editor-text">[ Transfer Funds ]<span></span></p>
+                    <p id="TransferAccount" class="editor-text">Account: <span></span></p>
+                    <p id="TransferAmount" class="editor-text">Amount: <span></span></p>
+
                 </div>
             </div>
             <!-- Right  <img src="img/mazelogo.png" class="mazelogo"> -->
             <div id="SelectL">
                 <div id="ActionRow">
-                    <a id="Home" class="Selector tooltip"><img src="img/icons8-bank-building-100.png" /><span class="tooltiptext">Home</span></a>
+                    <a id="HomeLi" class="Selector tooltip" onclick="MenuOption('Account')"><img src="img/icons8-bank-building-100.png" /><span class="tooltiptext">Home</span></a>
                     <br/>
-                    <a id="Deposit" class="Selector tooltip"><img src="img/icons8-cash-in-hand-100.png" /><span class="tooltiptext">Deposit</span></a>
+                    <a id="DepositLi" class="Selector tooltip" onclick="MenuOption('Deposit');"><img src="img/icons8-cash-in-hand-100.png" /><span class="tooltiptext">Deposit</span></a>
                     <br/>
-                    <a id="Withdraw" class="Selector tooltip"><img src="img/icons8-refund-100.png" /><span class="tooltiptext">Withdraw</span></a>
+                    <a id="Withdrawi" class="Selector tooltip" onclick="MenuOption('Withdraw');"><img src="img/icons8-refund-100.png" /><span class="tooltiptext">Withdraw</span></a>
                     <br/>
-                    <a id="Transfer" class="Selector tooltip"><img src="img/icons8-check-100.png" /><span class="tooltiptext">Transfer</span></a>    
+                    <a id="TransferLi" class="Selector tooltip" onclick="MenuOption('Transfer')"><img src="img/icons8-check-100.png" /><span class="tooltiptext">Transfer</span></a>    
                     <br/>
                 </div>
             </div>
             <div id="SelectR">
                 <div id="ActionRow">
-                    <a id="Home" class="Selector tooltip"><img src="img/icons8-bank-building-100.png" /><span class="tooltiptext">Home</span></a>
+                    <a id="HomeLi" class="Selector tooltip" onclick="MenuOption('Account')"><img src="img/icons8-bank-building-100.png" /><span class="tooltiptext">Home</span></a>
                     <br/>
-                    <a id="Deposit" class="Selector tooltip"><img src="img/icons8-cash-in-hand-100.png" /><span class="tooltiptext">Deposit</span></a>
+                    <a id="DepositLi" class="Selector tooltip" onclick="MenuOption('Deposit');"><img src="img/icons8-cash-in-hand-100.png" /><span class="tooltiptext">Deposit</span></a>
                     <br/>
-                    <a id="Withdraw" class="Selector tooltip"><img src="img/icons8-refund-100.png" /><span class="tooltiptext">Withdraw</span></a>
+                    <a id="Withdrawi" class="Selector tooltip" onclick="MenuOption('Withdraw');"><img src="img/icons8-refund-100.png" /><span class="tooltiptext">Withdraw</span></a>
                     <br/>
-                    <a id="Transfer" class="Selector tooltip"><img src="img/icons8-check-100.png" /><span class="tooltiptext">Transfer</span></a>    
+                    <a id="TransferLi" class="Selector tooltip" onclick="MenuOption('Transfer')"><img src="img/icons8-check-100.png" /><span class="tooltiptext">Transfer</span></a>    
                     <br/>
                 </div>
             </div>

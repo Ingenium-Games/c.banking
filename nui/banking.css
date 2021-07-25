@@ -58,7 +58,7 @@ p {
   background-color: rgba(0, 0, 0, 0.75) !important;
   box-shadow: 0px 0px 12px 7px rgba(0, 0, 0, 0.65) !important;
   z-index: 1;
-  top: 12.5vh !important;
+  top: 8.5vh !important;
   bottom: 12.5vh !important;  
   left: 15vw !important;
   right: 15vw !important;
@@ -80,13 +80,12 @@ p {
 }
 
 .mazelogo {
-  z-index: 2;
-  top: 35%;
-  bottom: 1%;
-  right:1.75%;
-  width: 96%;
-  height: 98%;
-  opacity: 12%;
+  z-index: 0;
+  top: 19vh;
+  left:36.75vw;
+  width: 25vw;
+  height: 53vh;
+  opacity: 18%;
   position: absolute !important;
 }
 
@@ -122,6 +121,22 @@ p {
   position: absolute;
 }
 
+#DepositActions {
+  border: 3px solid rgba(0, 0, 0, 0.25) !important;
+  border-radius: 28px;
+  background-color: rgba(0, 0, 0, 0.76) !important;
+  box-shadow: 0px 0px 6px 2px gray inset, 0px 0px 6px 2px rgb(0, 0, 0);
+  z-index: 15;
+  bottom: 1% !important;
+  left: 35% !important;  
+  right: 35% !important;
+  width: 30% !important;
+  height: 25% !important;
+  white-space: nowrap;
+  overflow-y: hidden;
+  position: absolute;
+}
+
 #Info {
   border: 3px solid rgba(0, 0, 0, 0.25) !important;
   border-radius: 28px;
@@ -148,6 +163,33 @@ p {
   background-image: -webkit-linear-gradient(#020 0%, transparent 25%);
   background-image: linear-gradient(to , transparent 25%);
   background-size: 4px 4px;
+}
+
+.editor-text {
+  color: rgba(60, 232, 255, 0.685);
+  font-size: 2em;
+  font-weight: 400;
+  text-shadow: 1px 0px 6px rgba(36, 138, 255, 0.85), -1px 0px 3px rgba(66, 170, 255, 0.85);
+  line-height: 2em;
+  margin: 25px;
+}
+
+#AccountHeading {
+  top: 0vh;
+  left: 13vw;
+  position: absolute;
+}
+
+#AccountNumber {
+  top: 10vh;
+  left: 3vw;
+  position: absolute;
+}
+
+#AccountBalance {
+  top: 22vh;
+  left: 3vw;
+  position: absolute;
 }
 
 .Selector {

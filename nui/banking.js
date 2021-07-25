@@ -2,6 +2,20 @@
 
 */
 
+function MenuOption(data) {
+    $("#Account").hide();
+    $("#Deposit").hide(); 
+    $("#DepositActions").hide();
+    $("#Withdraw").hide(); 
+    $("#WithdrawActions").hide();
+    $("#Transfer").hide();
+    $("#TransferActions").hide();
+    $("#"+data+"").show();
+    if (data != 'Account') {
+        $("#"+data+"Actions").show();
+    }
+};
+
 function Populate(data) {
 
 };
@@ -12,8 +26,8 @@ function Deposit(amount) {
     }));
 };
 
-function Wtchdrawl(amount) {
-    $.post('https://c.banking/Client:Banking:Withdrawl', JSON.stringify({
+function Withdraw(amount) {
+    $.post('https://c.banking/Client:Banking:Withdraw', JSON.stringify({
         data: {},
     }));
 };
