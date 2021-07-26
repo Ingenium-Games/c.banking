@@ -2,6 +2,8 @@
 
 */
 
+var Pin = 1122
+
 function MenuOption(data) {
     $("#Account").hide();
     $("#Deposit").hide(); 
@@ -18,6 +20,25 @@ function MenuOption(data) {
 
 function Populate(data) {
 
+};
+
+function PinCheck() {
+    var Check = document.querySelector('#EnterPin').value;
+    let Count = 0
+    if (Pin == Check) {
+        $("#Pin").hide();
+        $("#Home").show();
+    } else {
+        if (Count < 3) {
+            Count = Count++;
+            TriggerEvent("Client:Notify","Incorrect Pin: Attempt #"+Count+".")
+        } else {
+            TriggerEvent("Client:Notify","Incorrect Pin: Attempt #"+Count+". Please Change your PIN with the Bank!",2)
+            $.post('https://c.banking/Client:NUI:OnClose', JSON.stringify({
+
+            }));
+        };
+    };
 };
 
 function Deposit(amount) {
@@ -57,9 +78,11 @@ $(document).ready(function () {
             switch (data.message) {
                 case 'OnOpen':
                     Populate(data.Packet)
+                    Pin = data.Packet.Pin
                     break;
                 case 'OnUpdate':
                     Populate(data.Packet)
+                    Pin = data.Packet.Pin
                     break;
                 case 'default':
                     break;
@@ -68,6 +91,8 @@ $(document).ready(function () {
     };
     document.onkeyup = function(data){
         if (data == 27){
+            $("#Pin").show();
+            $("#Home").hide();
             $.post('https://c.banking/Client:NUI:OnClose', JSON.stringify({
 
             }));
