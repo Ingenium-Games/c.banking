@@ -18,6 +18,23 @@ function MenuOption(data) {
     }
 };
 
+function EventOption(data) {
+    switch(data){
+        case 'Client:Withdraw':
+            TriggerEvent("Client:Withdraw")
+        break
+        case 'Client:Deposit':
+            TriggerEvent("Client:Deposit")
+        break
+        case 'Client:Amount':
+            TriggerEvent("Client:Amount")
+        break
+        case 'Client:Account':
+            TriggerEvent("Client:Account")
+        break
+    };
+};
+
 function Populate(data) {
 
 };

@@ -158,21 +158,63 @@ p {
   margin: 25px;
 }
 
-#AccountHeading {
+#AccountHeadingInfo {
   top: 0vh;
-  left: 13vw;
+  left: 4vw;
   position: absolute;
 }
 
-#AccountNumber {
+#AccountNumberInfo {
   top: 10vh;
-  left: 3vw;
+  left: 4vw;
   position: absolute;
 }
 
-#AccountBalance {
+#AccountBalanceInfo {
   top: 22vh;
-  left: 3vw;
+  left: 4vw;
+  position: absolute;
+}
+
+#DepositHeadingInfo {
+  top: 0vh;
+  left: 4vw;
+  position: absolute;
+}
+
+#DepositAmountInfo {
+  top: 10vh;
+  left: 4vw;
+  position: absolute;
+}
+
+#WithdrawHeadingInfo {
+  top: 0vh;
+  left: 4vw;
+  position: absolute;
+}
+
+#WithdrawAmountInfo {
+  top: 10vh;
+  left: 4vw;
+  position: absolute;
+}
+
+#TransferHeadingInfo {
+  top: 0vh;
+  left: 4vw;
+  position: absolute;
+}
+
+#TransferAccountInfo {
+  top: 10vh;
+  left: 4vw;
+  position: absolute;
+}
+
+#TransferAmountInfo {
+  top: 22vh;
+  left: 4vw;
   position: absolute;
 }
 

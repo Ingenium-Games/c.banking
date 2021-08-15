@@ -70,7 +70,7 @@ var numpad = {
     let current = numpad.hdisplay.value,
         append = this.innerHTML;
     if (current.length < numpad.nowMax) {
-      if (current=="0") {
+      if (current=="") {
         numpad.hdisplay.value = append;
       } else {
         numpad.hdisplay.value += append;
@@ -128,7 +128,7 @@ var numpad = {
   show: function() {
     // (D1) SET CURRENT DISPLAY VALUE
     let cv = this.value;
-    if (cv == "") { cv = "0"; }
+    if (cv == "") { cv = ""; }
     numpad.hdisplay.value = cv;
 
     // (D2) SET MAX ALLOWED CHARACTERS

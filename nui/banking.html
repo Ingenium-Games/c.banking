@@ -17,69 +17,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <script>
-        window.addEventListener("load", function(){
-          // WITH OPTIONS
-          numpad.attach({
-            target: "EnterPin",
-            max: 10,
-            decimal: false
-          });
-          /*
-          numpad.attach({
-            target: "DepositPad",
-            decimal: false
-          });
-          numpad.attach({
-            target: "WithdrawPad",
-            decimal: false
-          });
-          numpad.attach({
-            target: "TransferAccountPad",
-            decimal: false
-          });
-          numpad.attach({
-            target: "TransferAmountPad",
-            decimal: false
-          });
-          */
-        });
-    </script>
     <img src="img/mazelogo.png" class="mazelogo">
     <!-- Menu -->
     <div id="Menu" style="display: inline;">
-        <div id="Pin" style="display: inline;">
+        <div id="Pin" style="display: none;">
             <div id="SelectL">
                 <div id="ActionRow">
                     <a id="PinLi" class="Selector tooltip"  onclick="PinCheck()"><img src="img/icons8-checkmark-100.png" /><span class="tooltiptext">Submit Pin</span></a>
                 </div>
             </div>
             <br/>
-            <input id="EnterPin" type="password"/>
             <br/>
         </div>
-        <div id="Home" style="display: none;">    
+        <div id="Home" style="display: inline;">    
             <!-- Left -->
             <div id="Info" class="scanlines">
                 <div id="Account" style="display: inline;">
-                    <p id="AccountHeading" class="editor-text">[ Account Information ]<span></span></p>
-                    <p id="AccountNumber" class="editor-text">Account: <span></span></p>
-                    <p id="AccountBalance" class="editor-text">Balance: <span></span></p>
+                    <p id="AccountHeadingInfo" class="editor-text">:/Account<span></span></p>
+                    <p id="AccountNumberInfo" class="editor-text">Account: <span></span></p>
+                    <p id="AccountBalanceInfo" class="editor-text">Balance: <span></span></p>
                 </div>
                 <div id="Deposit" style="display: none;">    
-                    <p id="DepositHeading" class="editor-text">[ Deposit Funds ]<span></span></p>
-                    <p id="DepositAmount" class="editor-text">Amount: <span></span></p> 
+                    <p id="DepositHeadingInfo" class="editor-text">:/Deposit<span></span></p>
+                    <p id="DepositAmountInfo" class="editor-text">Amount: <span></span></p> 
+                    <br/>
                 </div>
                 <div id="Withdraw" style="display: none;">    
-                    <p id="WithdrawHeading" class="editor-text">[ Withdraw Funds ]<span></span></p>
-                    <p id="WithdrawAmount" class="editor-text">Amount: <span></span></p>
-
+                    <p id="WithdrawHeadingInfo" class="editor-text">:/Withdraw<span></span></p>
+                    <p id="WithdrawAmountInfo" class="editor-text">Amount: <span></span></p>
+                    <br/>
                 </div>
                 <div id="Transfer" style="display: none;">    
-                    <p id="TransferHeading" class="editor-text">[ Transfer Funds ]<span></span></p>
-                    <p id="TransferAccount" class="editor-text">Account: <span></span></p>
-                    <p id="TransferAmount" class="editor-text">Amount: <span></span></p>
-
+                    <p id="TransferHeadingInfo" class="editor-text">:/Transfer<span></span></p>
+                    <p id="TransferAccountInfo" class="editor-text">Account: <span></span></p>
+                    <p id="TransferAmountInfo" class="editor-text">Amount: <span></span></p>
+                    <br/>
                 </div>
             </div>
             <!-- Right  <img src="img/mazelogo.png" class="mazelogo"> -->
@@ -99,13 +71,19 @@
                 <div id="ActionRow">
                     <!-- User Actions -->
                     <div id="DepositActions" style="display: none;">
-                        <a id="DepositConfirm" class="Selector tooltip" onclick=""><img src="img/icons8-money-100.png" /><span class="tooltiptext">Deposit</span></a>
+                        <a id="DepositAmount" class="Selector tooltip" onclick="EventOption('Client:Deposit')"><img src="img/icons8-money-100.png" /><span class="tooltiptext">Enter Amount</span></a>
+                        <br/>
+                        <a id="DepositConfirm" class="Selector tooltip" onclick=""><img src="img/icons8-checkmark-100.png" /><span class="tooltiptext">Deposit</span></a>
                     </div> 
                     <div id="WithdrawActions" style="display: none;">
-                        <a id="WithdrawConfirm" class="Selector tooltip" onclick=""><img src="img/icons8-money-100.png" /><span class="tooltiptext">Withdraw</span></a>
+                        <a id="WithdrawAmount" class="Selector tooltip" onclick="EventOption('Client:Withdraw')"><img src="img/icons8-money-100.png" /><span class="tooltiptext">Enter Amount</span></a>
+                        <br/>
+                        <a id="WithdrawConfirm" class="Selector tooltip" onclick=""><img src="img/icons8-checkmark-100.png" /><span class="tooltiptext">Withdraw</span></a>
                     </div>   
                     <div id="TransferActions" style="display: none;">
-                        <a id="TransferAccount" class="Selector tooltip" onclick=""><img src="img/icons8-bank-building-100.png" /><span class="tooltiptext">Enter Account</span></a>
+                        <a id="TransferAccount" class="Selector tooltip" onclick="EventOption('Client:Account')"><img src="img/icons8-bank-building-100.png" /><span class="tooltiptext">Enter Account</span></a>
+                        <br/>
+                        <a id="TransferAmount" class="Selector tooltip" onclick="EventOption('Client:Amount')"><img src="img/icons8-money-100.png" /><span class="tooltiptext">Enter Amount</span></a>
                         <br/>
                         <a id="TransferConfirm" class="Selector tooltip" onclick=""><img src="img/icons8-checkmark-100.png" /><span class="tooltiptext">Transfer</span></a>
                     </div>  
